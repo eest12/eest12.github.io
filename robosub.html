@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboSub</title>
+    <meta name="description" content="Overview of the RoboSub project." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-projects.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- *************** NAVIGATION *************** -->
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="index.html#services">services</a></li>
+        <li><a href="index.html#projects">projects</a></li>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="index.html#connect">connect</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex-wrapper">
+
+      <!-- *************** MAIN *************** -->
+      <article>
+        <h2>Project</h2>
+        <h1>RoboSub</h1>
+        <div class="body-sidebar">
+          <section>
+            <p>RoboNation's RoboSub is an international robotics competition where multi-disciplinary teams build autonomous underwater vehicles to perform several pre-determined tasks. I was a part of Cal State LA's computer science team. My role was to use computer vision to train our sub to detect underwater obstacles and interact with them accordingly.</p>
+            <p>The model used for object detection was You Only Look Once (YOLOv3), a state-of-the-art convolutional neural network. This required a lot of configuration, including the installation of CUDA. To train the model, we gathered images and labeled the objects that needed to be detected. Some image and label datasets were provided by other teams using a different computer vision method, so a custom script was necessary to translate these labels into the correct YOLO format.</p>
+            <p>A major challenge was the low visibility from the muddy waters of the competition site. To address this, image filtering techniques were used to increase the quality of the footage, making it easier for the model to detect the obstacles. One such technique was histogram equalization with OpenCV, which corrects the contrast of an image.</p>
+            <p>One of our tasks was to train the model to identify four different dice, for which we used just over 900 images. The mean average precision (mAP) was 97.73%, which evaluates how accurately objects were classified. The intersection over union (IoU) was 86.68%, which evaluates the accuracy of the bounding boxes around the detected objects.</p>
+            <figure>
+              <img src="images/dice_detection.gif" alt="YOLO performing dice detection" width=500 />
+              <figcaption>Dice detection</figcaption>
+            </figure>
+          </section>
+
+        <!-- *************** SIDEBAR *************** -->
+          <aside>
+            <dl>
+              <dt>Field</dt>
+              <dd>Machine learning</dd>
+              <dt>Years</dt>
+              <dd>2018-2019</dd>
+              <dt>Completed For</dt>
+              <dd>Senior design (California State University, Los Angeles)</dd>
+              <dt>Team / Individual</dt>
+              <dd>Team</dd>
+              <dt>Role</dt>
+              <dd>Computer vision</dd>
+              <dt>Language</dt>
+              <dd>Python</dd>
+              <dt>Technologies</dt>
+              <dd>Darknet (YOLO), OpenCV, ROS, CUDA</dd>
+              <dt>Paper</dt>
+              <dd><a href="https://robonation.org/app/uploads/sites/4/2019/10/CSULA_RS19_TDR.pdf">"Technical Overview of the Development of Autonomous Submarines GY4R4D0S and M4G1K4RP"</a></dd>
+            </dl>
+          </aside>
+        </div>
+      </article>
+
+      <!-- *************** FOOTER *************** -->
+      <footer>
+        <p>© 2021 by Erika Estrada. :-)</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>

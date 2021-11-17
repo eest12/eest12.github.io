@@ -1,0 +1,392 @@
+/* COLORS
+ * https://coolors.co/f83a44-F8AA51-0a0a0a-38686a-94c492-f5f4ef
+ * #f83a44 - pink
+ * #F8AA51 - yellow
+ * #0a0a0a - black
+ * #39655e - dark green (not enough contrast for normal text)
+ * #94c492 - light green
+ * #f5f4ef - white
+ */
+
+
+/* ---------- Global ---------- */
+/* These two blocks ensure margin and padding don't affect width/height */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #f5f4ef;
+  font-family: 'Montserrat', sans-serif;
+}
+b {
+  font-weight: normal;
+  color: #f83a44;
+}
+h1, h2, h3 {
+  font-family: 'Comfortaa', cursive;
+}
+h2 {
+  font-size: 40px;
+  color: #f83a44;
+  margin: 0 0 80px 0;
+  letter-spacing: 4px;
+  /* border-left: 8px solid #f5f4ef;
+  padding-left: 25px; */
+  text-align: center;
+}
+h3 {
+  color: #F8AA51;
+  font-size: 22px;
+}
+p {
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 135%; /* relative to font-size */
+}
+a {
+  color: #94c492;
+  text-decoration: none;
+}
+/* section {
+  background: rgba(56, 104, 106, 0.4);
+  width: 1000px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+} */
+.homepage-section {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 80px;
+  border-top: 5px dotted #39655e;
+}
+/* section:first-of-type {
+  border-top: none;
+} */
+.clear {
+  clear: both;
+}
+
+
+/* ---------- Header ---------- */
+@keyframes slide-right {
+  from { left: -100px }
+}
+@keyframes slide-left {
+  from { right: -100px }
+}
+header {
+  /* overflow-x: hidden; /* this is to hide the scrollbar that appears during the animation, but causes problems when viewing content on narrow screen */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+h1 {
+  margin: 30px 0;
+  font-size: 95px;
+}
+nav {
+  font-size: 24px;
+  color: #94c492;
+  text-align: right;
+  font-family: 'Comfortaa', cursive;
+}
+ul { /* header only? */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li { /* header only? */
+  display: inline;
+  margin-left: 15px;
+}
+li:first-of-type { /* header only? */
+  margin-left: 0;
+}
+header a {
+  padding: 10px 15px;
+}
+header a:hover {
+  background: #f83a44;
+  color: #f5f4ef;
+  border-radius: 10px;
+}
+header p {
+  margin-bottom: 50px;
+  font-size: 26px;
+  line-height: 150%;
+}
+header img {
+  /* float: right; */
+
+  /* this part is needed just for animation */
+  position: relative;
+  right: 0;
+  animation-name: slide-left;
+  animation-duration: 1s;
+}
+.header-text {
+  /* might have to change/delete/move these */
+  /* width: 950px; */
+  margin: 300px 0 0 150px;
+  /* float: left; */
+
+  /* this part is needed just for animation */
+  position: relative;
+  left: 0;
+  animation-name: slide-right;
+  animation-duration: 1s;
+}
+
+
+/* ---------- Services ---------- */
+.services-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.services-item {
+  margin: 0 60px;
+  width: 330px;
+}
+.services-icon-bg {
+  display: inline-block;
+  background-color: #94c492;
+  /* border: 5px solid #39655e; */
+  border-radius: 90px;
+  padding: 40px;
+  margin-bottom: 10px;
+}
+
+
+/* ---------- Projects ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 40px 20px;
+}
+.project-item div { /* placeholder for thumbnail */
+  width: 100%;
+  height: 180px;
+  border: 1px solid white;
+}
+.project-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.project-grid a {
+  background: #f83a44;
+  color: #f5f4ef;
+  padding: 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  display: inline-block;
+}
+.project-grid a:hover {
+  background: #39655e;
+}
+
+
+/* ---------- About ---------- */
+.about-container h3 {
+  margin: 0;
+}
+.about-container {
+  display: flex;
+  justify-content: space-between;
+}
+.about-container article {
+  max-width: 450px;
+}
+.about-container img {
+  margin: 0 50px;
+  border-radius: 20px;
+}
+
+
+/* ---------- Connect ---------- */
+.connect-list {
+  display: flex;
+  justify-content: center;
+}
+.connect-list li {
+  width: 95px;
+  height: 95px;
+  margin: 0 25px;
+}
+.connect-icon {
+  height: 90%;
+  width: 90%;
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 300ms;
+}
+.connect-icon:hover {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+.icon1 {
+  background-image: url("../images/email-round-solid-white.png"); /* uxwing.com */
+}
+.icon1:hover {
+  background-image: url("../images/email-round-solid-pink.png");
+}
+.icon2 {
+  background-image: url("../images/LI-In-Bug-White.png");
+}
+.icon2:hover {
+  background-image: url("../images/LI-In-Bug-Pink.png");
+}
+.icon3 {
+  background-image: url("../images/GitHub-Mark-Light-120px-plus.png");
+}
+.icon3:hover {
+  background-image: url("../images/GitHub-Mark-Pink-120px-plus.png");
+}
+
+
+/* ---------- Footer ---------- */
+footer p {
+  font-size: 14px;
+  text-align: center;
+  background: rgba(256, 256, 256, 0.05);
+  margin: 0;
+  padding: 10px 0;
+}
+
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width:1620px) {
+  h1 {
+    font-size: 80px;
+  }
+  header p {
+    font-size: 24px;
+  }
+  nav {
+    font-size: 20px;
+  }
+  header img {
+    width: 460px;
+    height: 800px;
+  }
+  .header-text {
+    margin-top: 250px;
+    margin-left: 125px;
+  }
+}
+@media screen and (max-width:1360px) {
+  h1 {
+    font-size: 70px;
+  }
+  header p {
+    font-size: 22px;
+  }
+  header img {
+    width: 360px;
+    height: 626px;
+  }
+  .header-text {
+    margin-top: 150px;
+    margin-left: 100px;
+  }
+}
+@media screen and (max-width:980px) {
+  nav {
+    text-align: left;
+  }
+  .header-text {
+    margin-top: 100px;
+    margin-left: 70px;
+  }
+  li {
+    display: block;
+    margin: 15px 0;
+  }
+  section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .services-container, .about-container {
+    flex-direction: column;
+  }
+  .services-item, .about-container article, .about-container img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .services-item:first-of-type, .about-container article {
+    margin-bottom: 50px;
+  }
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .about-container {
+    text-align: center;
+  }
+}
+@media screen and (min-width:981px) and (max-width:1150px) {
+  section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .about-container img {
+    width: 300px;
+    height: 375px;
+  }
+}
+/* @media screen and (min-width:981px) {
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+} */
+@media screen and (max-width:750px) {
+  h1 {
+    font-size: 65px;
+  }
+  header img {
+    width: 260px;
+    height: 452px;
+  }
+  .header-text {
+    margin-top: 50px;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width:620px) {
+  header img {
+    width: 0;
+  }
+  .header-text {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .project-item {
+    border-bottom: 1px solid #39655e;
+    padding-bottom: 15px;
+  }
+  .project-item:last-of-type {
+    border: none;
+  }
+  .homepage-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

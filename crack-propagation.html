@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crack Propagation</title>
+    <meta name="description" content="Overview of the Crack Propagation project." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style-projects.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- *************** NAVIGATION *************** -->
+    <nav aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="index.html#services">services</a></li>
+        <li><a href="index.html#projects">projects</a></li>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="index.html#connect">connect</a></li>
+      </ul>
+    </nav>
+
+    <div class="flex-wrapper">
+
+      <!-- *************** MAIN *************** -->
+      <article>
+        <h2>Project</h2>
+        <h1>Crack Propagation</h1>
+        <div class="body-sidebar">
+          <section>
+            <p>This solo project was developed within the Data Science Research Group at Cal State LA under the guidance of my thesis advisor. The purpose was to use deep learning to predict the future development of concrete cracks. Given a set of images showing the continuous growth of a crack, the goal was to generate the subsequent images in the sequence, thus forecasting the deterioration of a damaged structure.</p>
+            <p>To accomplish this, videos of crack growth were collected and preprocessed to create a clean, consistent dataset. Each sample was a series of frames showing the state of a fracture over time. Because the necessary data was highly limited, data augmentation was a useful technique to increase the number of samples and introduce more variety to the dataset. This involved transformation techniques to make small modifications to the images, such as rotation. Transfer learning allieved this issue as well by training with a large, standard dataset of moving handwritten digits (Moving-MNIST) before utilizing the crack propagation footage.</p>
+            <p>The spatiotemporal nature of the dataset led to selecting Convolutional Long Short-Term Memory (ConvLSTM) as the machine learning model. A convolutional layer processed the images before passing them on to the LSTM to capture the temporal relationship between them. The ouput was a series of images depicting the future continuation of the sequence.</p>
+            <p>The results are shown in the animated images below. The first ten frames of either animation are the same because they are the input&mdash;the images that the model sees and processes. In the first animation, the last ten frames are the expected output&mdash;what the rest of the sequence looks like in real life. In the second animation, the last ten frames are the generated output&mdash;what the model predicted. The model was evaluated by how similar the pixels in the predicted frames were to the ground truth frames. The lowest testing loss achieved was an RMSE of 0.0028.</p>
+            <figure role="group">
+              <figure>
+                <img src="images/crack_ground_truth.gif" class="border" alt="Ground truth of crack growth" width=150 />
+                <figcaption>Ground truth</figcaption>
+              </figure>
+              <figure>
+                <img src="images/crack_prediction.gif" class="border" alt="Prediction of crack growth" width=150 />
+                <figcaption>Prediction</figcaption>
+              </figure>
+            </figure>
+          </section>
+
+        <!-- *************** SIDEBAR *************** -->
+          <aside>
+            <dl>
+              <dt>Field</dt>
+              <dd>Machine learning</dd>
+              <dt>Years</dt>
+              <dd>2020-2021</dd>
+              <dt>Completed For</dt>
+              <dd>Master thesis (California State University, Los Angeles)</dd>
+              <dt>Team / Individual</dt>
+              <dd>Individual (with advisor guidance)</dd>
+              <dt>Language</dt>
+              <dd>Python</dd>
+              <dt>Technologies</dt>
+              <dd>PyTorch, OpenCV, Matplotlib, CUDA</dd>
+              <dt>Paper</dt>
+              <dd>"Deep Learning for Infrastructure Defect Monitoring and Forecasting" (to be published in <a href="https://www.springer.com/series/11769"><i>Transactions on Computational Science and Computational Intelligence</i></a>)</dd>
+            </dl>
+          </aside>
+        </div>
+      </article>
+
+      <!-- *************** FOOTER *************** -->
+      <footer>
+        <p>© 2021 by Erika Estrada. :-)</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
