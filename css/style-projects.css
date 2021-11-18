@@ -13,7 +13,7 @@ nav {
   padding: 25px 40px 25px 25px;
 }
 /* nav a {
-  color: #f5f4ef;
+  color: #f8aa51;
 } */
 nav a:hover {
   color: #f5f4ef;
@@ -49,6 +49,7 @@ h2 {
   color: #94c492;
   font-size: 28px;
   margin: 0;
+  text-align: left;
 }
 figure {
   text-align: center;
@@ -59,11 +60,12 @@ figure figure {
   margin-top: 0;
   margin-bottom: 0;
 }
+figure img {
+  border: 2px #f8aa51 solid;
+}
 figcaption {
   margin-top: 15px;
-}
-.border {
-  border: 4px #f5f4ef solid;
+  color: #f8aa51;
 }
 
 
@@ -77,4 +79,53 @@ dt::after {
 }
 dd {
   margin: 8px 0 16px 0;
+}
+
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 1200px) {
+  article {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .body-sidebar {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .body-sidebar section {
+    border-bottom: 1px gray solid;
+    width: 100%;
+  }
+  .body-sidebar aside {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 750px) {
+  nav {
+    font-size: 20px;
+    padding: 25px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  article {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  nav {
+    text-align: center;
+  }
+  nav li {
+    display: block;
+    margin: 15px 0;
+  }
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  figure img {
+    max-width: 100%;
+  }
 }

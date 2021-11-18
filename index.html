@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" />
-    <!-- <link rel="preload" href="myFont.woff2" as="font" type="font/woff2" crossorigin="anonymous" /> -->
-    <!-- <script src="main.js"></script> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
   </head>
   <body>
     <!-- *************** HEADER *************** -->
@@ -19,7 +21,7 @@
         <h1>Hi there, I'm <b>Erika</b>.</h1>
         <p>I am a <b>programmer</b> and <b>data scientist</b> based in SoCal.<br/>
           Scroll down to learn more about what I do.</p>
-        <nav aria-label="Main menu">
+        <nav class="homepage-menu" aria-label="Main menu">
           <ul>
             <li><a href="#services">services</a></li>
             <li><a href="#projects">projects</a></li>
@@ -29,7 +31,7 @@
         </nav>
       </div>
       <!-- <img src="images/mohammad-rahmani-N5bT5RctFZ8-unsplash(2).png" alt="Laptop with programming code on screen" width=560 height=975 /> -->
-      <img srcset="images/mohammad-rahmani-N5bT5RctFZ8-unsplash(2)-small.jpg 500w,
+      <img srcset="images/mohammad-rahmani-N5bT5RctFZ8-unsplash(2)-small.jpg 600w,
                     images/mohammad-rahmani-N5bT5RctFZ8-unsplash(2).jpg 1102w"
             sizes="(max-width: 750px) 260px,
                     (max-width: 1360px) 360px,
@@ -68,11 +70,11 @@
 
         <!-- Project 1 -->
         <div class="project-item">
-          <!-- <img src="images/justus-menke-Wn8fHmOxAm8-unsplash.jpg" alt="Concrete crack" /> -->
-          <img srcset="images/justus-menke-Wn8fHmOxAm8-unsplash-small.jpg 300w,
+          <img src="images/justus-menke-Wn8fHmOxAm8-unsplash.jpg" alt="Concrete crack" />
+          <!-- <img srcset="images/justus-menke-Wn8fHmOxAm8-unsplash-small.jpg 400w,
                         images/justus-menke-Wn8fHmOxAm8-unsplash.jpg 600w"
                 src="images/justus-menke-Wn8fHmOxAm8-unsplash.jpg"
-                alt="Concrete crack" />
+                alt="Concrete crack" /> -->
           <h3>Crack Propagation</h1>
           <p>Using deep learning to predict the visual growth of cracks on concrete surfaces over time.</p>
           <a href="crack-propagation.html" aria-label="Overview of Crack Propagation project">Overview</a>
@@ -80,7 +82,7 @@
 
         <!-- Project 2 -->
         <div class="project-item">
-          <img src="images/robosub.jpg" />
+          <img src="images/robosub.jpg" alt="Cal State LA's AUV underwater" />
           <h3>RoboSub</h1>
           <p>Giving an autonomous submarine the ability to detect underwater objects with advanced computer vision.</p>
           <a href="robosub.html" aria-label="Overview of RoboSub project">Overview</a>
@@ -88,7 +90,7 @@
 
         <!-- Project 3 -->
         <div class="project-item">
-          <img src="images/howard-bouchevereau-BRDO4C-0h_s-unsplash.jpg" />
+          <img src="images/howard-bouchevereau-BRDO4C-0h_s-unsplash.jpg" alt="Bike standing against a wall" />
           <h3>Bike Sharing Demand</h1>
           <p>Predicting the demand of bicycle rentals based on previous hourly data over the years.</p>
           <p>Details coming soon.</p>
@@ -96,25 +98,25 @@
 
         <!-- Project 4 -->
         <div class="project-item">
-          <img src="images/mohammad-rahmani-N5bT5RctFZ8-unsplash(2)-small.jpg" />
+          <img src="images/mohammad-rahmani-N5bT5RctFZ8-unsplash(2)-cropped.jpg" alt="Laptop with programming code on screen" />
           <h3>Tech Portfolio</h1>
           <p>Building a website that displays my technical projects and background.</p>
-          <a href="" aria-label="Tech portfolio website">Website</a>
-          <a href="" aria-label="Code for tech portfolio">Code</a>
+          <a href="https://eest12.github.io/" aria-label="Tech portfolio website">Website</a>
+          <a href="https://github.com/eest12/eest12.github.io" aria-label="Code for tech portfolio">Code</a>
         </div>
 
         <!-- Project 5 -->
         <div class="project-item">
-          <img src="images/jess-bailey-l3N9Q27zULw-unsplash(2).jpg" />
+          <img src="images/jess-bailey-l3N9Q27zULw-unsplash(2).jpg" alt="Color pencils lined up side by side" />
           <h3>Art Portfolio</h1>
           <p>Creating a gallery with an artistic design to showcase my illustrations.</p>
-          <a href="" aria-label="Art portfolio website">Website</a>
-          <a href="" aria-label="Code for art portfolio">Code</a>
+          <a href="https://eest12.github.io/Art-Portfolio/" aria-label="Art portfolio website">Website</a>
+          <a href="https://github.com/eest12/Art-Portfolio" aria-label="Code for art portfolio">Code</a>
         </div>
 
         <!-- Project 6 -->
         <div class="project-item">
-          <img src="images/jessica-ruscello-OQSCtabGkSY-unsplash.jpg" />
+          <img src="images/jessica-ruscello-OQSCtabGkSY-unsplash.jpg" alt="Books on shelves" />
           <h3>Library Database</h1>
           <p>Simulating a library database that allows the user to browse a catalog and check out books.</p>
           <a href="https://github.com/eest12/WebProjects/tree/master/Library" aria-label="Code for library database project">Code</a>
@@ -134,15 +136,17 @@
             My latest work in machine learning was presented at the 25th International Conference on Image Processing, Computer Vision, and Pattern Recognition.</p>
           <p>Outside of programming, I love to do fitness and digital illustration. (Check out my <a href="https://eest12.github.io/Art-Portfolio/" aria-label="Art portfolio">art portfolio</a>.)</p>
         </article>
-        <!-- <img src="images/erika-portrait.jpg" alt="Erika smiling" width=400 height=500 /> -->
-        <img srcset="images/erika-portrait-small.jpg 400w,
-                      images/erika-portrait.jpg 800w"
-              sizes="(max-width: 620px) 300px,
-                      (max-width: 980px) 400px,
-                      (max-width: 1150px) 300px,
-                      400px"
-              src="images/erika-portrait.jpg"
-              alt="Erika smiling" />
+        <div class="about-img-container">
+          <!-- <img src="images/erika-portrait.jpg" alt="Erika smiling" width=400 height=500 /> -->
+          <img srcset="images/erika-portrait-small.jpg 400w,
+                        images/erika-portrait.jpg 800w"
+                sizes="(max-width: 620px) 300px,
+                        (max-width: 980px) 400px,
+                        (max-width: 1150px) 300px,
+                        400px"
+                src="images/erika-portrait.jpg"
+                alt="Erika smiling" />
+        </div>
       </div>
     </section>
 

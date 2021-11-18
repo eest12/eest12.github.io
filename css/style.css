@@ -1,9 +1,9 @@
 /* COLORS
- * https://coolors.co/f83a44-F8AA51-0a0a0a-38686a-94c492-f5f4ef
+ * https://coolors.co/f83a44-0a0a0a-38686a-f8aa51-94c492-f5f4ef
  * #f83a44 - pink
- * #F8AA51 - yellow
  * #0a0a0a - black
  * #39655e - dark green (not enough contrast for normal text)
+ * #f8aa51 - yellow
  * #94c492 - light green
  * #f5f4ef - white
  */
@@ -41,7 +41,7 @@ h2 {
   text-align: center;
 }
 h3 {
-  color: #F8AA51;
+  color: #f8aa51;
   font-size: 22px;
 }
 p {
@@ -202,14 +202,19 @@ header img {
 }
 .about-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .about-container article {
   max-width: 450px;
 }
 .about-container img {
-  margin: 0 50px;
+  /* margin: 0 50px; */
   border-radius: 20px;
+  /* object-fit: contain; */
+}
+.about-img-container {
+  object-fit: contain;
+  margin-left: 50px;
 }
 
 
@@ -274,7 +279,7 @@ footer p {
   header p {
     font-size: 24px;
   }
-  nav {
+  .homepage-menu {
     font-size: 20px;
   }
   /* header img {
@@ -303,18 +308,18 @@ footer p {
   }
 }
 @media screen and (max-width:980px) {
-  nav {
+  .homepage-menu {
     text-align: left;
   }
   .header-text {
     margin-top: 100px;
     margin-left: 70px;
   }
-  li {
+  .homepage-menu li {
     display: block;
     margin: 15px 0;
   }
-  section {
+  .homepage-section {
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -335,17 +340,20 @@ footer p {
   .about-container {
     text-align: center;
   }
+  .about-img-container {
+    margin-left: 0;
+  }
 }
-@media screen and (min-width:981px) and (max-width:1150px) {
-  section {
+/* @media screen and (min-width:981px) and (max-width:1150px) { */
+  /* section {
     padding-left: 40px;
     padding-right: 40px;
-  }
+  } */
   /* .about-container img {
     width: 300px;
     height: 375px;
   } */
-}
+/* } */
 /* @media screen and (min-width:981px) {
   .about-container {
     display: flex;
@@ -379,7 +387,7 @@ footer p {
     grid-template-rows: repeat(6, 1fr);
   }
   .project-item {
-    border-bottom: 1px solid #39655e;
+    border-bottom: 1px solid gray;
     padding-bottom: 15px;
   }
   .project-item:last-of-type {
