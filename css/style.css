@@ -53,6 +53,11 @@ a {
   color: #94c492;
   text-decoration: none;
 }
+abbr[title] {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
 /* section {
   background: rgba(56, 104, 106, 0.4);
   width: 1000px;
