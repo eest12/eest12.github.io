@@ -188,6 +188,19 @@ header img {
   height: 180px;
   object-fit: cover;
 }
+.project-item ul {
+  margin: 24px 0;
+}
+.project-item ul li {
+  margin: 0;
+  color: #f83a44;
+}
+.project-item ul li:after {
+  content: " \00b7";
+}
+.project-item ul li:last-child:after {
+  content: none;
+}
 .project-grid a {
   background: #f83a44;
   color: #f5f4ef;
