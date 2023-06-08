@@ -23,6 +23,7 @@ body {
   background: #0a0a0a;
   color: #f5f4ef;
   font-family: 'Montserrat', sans-serif;
+  cursor: url('../images/cursor-svgrepo-com.png'), auto; /* svgrepo.com */
 }
 b {
   font-weight: normal;
@@ -52,6 +53,7 @@ p {
 a {
   color: #94c492;
   text-decoration: none;
+  cursor: url("../images/cursor-pointer-svgrepo-com.png"), pointer; /* svgrepo.com */
 }
 abbr[title] {
   border-bottom: none !important;
