@@ -29,7 +29,7 @@ b {
   font-weight: normal;
   color: #f83a44;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Comfortaa', cursive;
 }
 h2 {
@@ -44,6 +44,10 @@ h2 {
 h3 {
   color: #f8aa51;
   font-size: 22px;
+}
+h4 {
+  color: #94c492;
+  font-size: 20px;
 }
 p {
   margin: 20px 0;
@@ -174,10 +178,16 @@ header img {
 
 
 /* ---------- Projects ---------- */
+.project-category {
+  text-align: center;
+  width: 50%;
+  margin: 60px auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f8aa51;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   grid-gap: 40px 20px;
 }
 .project-item div { /* placeholder for thumbnail */
@@ -355,7 +365,6 @@ footer p {
   }
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
   }
   .about-container {
     text-align: center;
@@ -402,9 +411,11 @@ footer p {
     margin-left: 10%;
     margin-right: 10%;
   }
+  .project-category {
+    width: 80%;
+  }
   .project-grid {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(6, 1fr);
   }
   .project-item {
     border-bottom: 1px solid gray;
